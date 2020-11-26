@@ -24,7 +24,7 @@ if [ "$CONT" = "y" ]; then
   echo "Updating Molecule Suite..."
   sleep 2
 cd MoleculeCloudSH
-  bash MoleculeSuiteInstall.mpk
+  bash .SystemPackage/MoleculeSuiteInstall.mpk
   sleep 2
   echo "All MoleculeShell Suite Updated! YEY!"
   sleep 3
