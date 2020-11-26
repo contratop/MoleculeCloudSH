@@ -1,6 +1,6 @@
 clear
 	sleep 1
-	echo Molecule Package Manager  1.0
+	echo Molecule Package Manager  1.2
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
@@ -26,6 +26,7 @@ if [ "$CONT" = "y" ]; then
 cd MoleculeCloudSH
   bash .SystemPackage/MoleculeSuiteInstall.mpk
   sleep 2
+clear
   echo "All MoleculeShell Suite Updated! YEY!"
   sleep 3
   break;
