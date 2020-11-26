@@ -5,8 +5,9 @@ clear
   echo Powered by ContratopDev
   sleep 2
 clear
-echo Molecule OpenFTP Server 0.9
+echo Molecule OpenFTP Server 1.0
 echo Running in Applets/
+echo ""
 sleep 1
 python Applets/ftpserver.py
 
