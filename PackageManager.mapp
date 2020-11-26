@@ -28,10 +28,14 @@ cd MoleculeCloudSH
   sleep 2
 clear
   echo "All MoleculeShell Suite Updated! YEY!"
+sleep 1
+echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
   sleep 3
   break;
 else
-  echo "booo";
+  echo "MoleculeShell Updated, Molecule Suite Skipped"
+sleep 2
+break;
 fi
             ;;
         "Uninstall")
