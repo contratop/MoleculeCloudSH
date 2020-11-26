@@ -39,6 +39,8 @@ break;
 fi
             ;;
         "Uninstall")
+clear
+echo "WARNING: All data we be erased, Including Applets SaveData"
             read -p "UNINSTALL SELECTED!! Continue (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Uninstalling..."
