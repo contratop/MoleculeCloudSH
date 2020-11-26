@@ -1,13 +1,13 @@
 clear
 	sleep 1
-	echo Molecule Package Manager  1.2
+	echo Molecule Package Manager  1.3
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
 clear
 	echo What would you like to do?
 	PS3='Please enter your choice: '
-options=("Update" "Uninstall" "Quit")
+options=("Update" "Uninstall" "InstallSuite" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -45,6 +45,19 @@ if [ "$CONT" = "y" ]; then
   echo "Uninstalled!"
   sleep 2
   break;
+else
+  break;
+fi
+            ;;
+		"InstallSuite")
+		echo ""
+		read -p "Install Only Actual Suite? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing Suite..."
+  bash .SystemPackage/MoleculeSuiteInstall.mpk
+  sleep 2
+  echo ""
+  echo Suite Installed!;
 else
   break;
 fi
