@@ -1,0 +1,140 @@
+clear
+	sleep 1
+	echo Molecule Package Manager  0.8 BETA
+	sleep 1
+	echo Powered by ContratopDev
+	sleep 3
+	echo ""
+	echo ""
+PS3='Please enter your choice: '
+options=("Install a Applet" "Uninstall a Applet" "Install All" "Uninstall All" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Install a Applet")
+            echo "Select a Applet"
+			PS3='Please enter your choice: '
+options=("SocialSploit" "Tool-X" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "SocialSploit")
+		echo ""
+            read -p "Install SocialSploit? (y/n)" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing SocialSploit..."
+  sleep 1
+  bash ../.Packages/SocialSploit_Installet.mpk
+  sleep 2
+  clear
+  echo "SocialSploit Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+        "Tool-X")
+            read -p "Install Tool-X? (y/n)" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing Tool-X"
+  sleep 1
+  bash ../.Packages/Tool-X_Installer.mpk
+    sleep 2
+  clear
+  echo "SocialSploit Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+            ;;
+        "Uninstall a Applet")
+            echo "Select an applet to uninstall"
+			PS3='Please enter your choice: '
+options=("SocialSploit" "Tool-X" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "SocialSploit")
+            read -p "You sure want to uninstall SocialSploit (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling SocialSploit..."
+  sleep 1
+  rm -rf ../.software/SocialSploit
+  sleep 1
+  echo "Uninstalled!"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+        "Tool-X")
+            read -p "You sure want to uninstall Tool-X (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling Tool-X..."
+  sleep 1
+  rm -rf ../.software/Tool-X
+  sleep 1
+  echo "Uninstalled!"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+            ;;
+        "Install All")
+		Package Avariable: 2
+            read -p "Are you sure you want to install all the available software? it may take a LONG time (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing (1/2)"
+  sleep 1
+  bash ../.Packages/SocialSploit_Installet.mpk
+  sleep 1
+  echo "Installing (2/2)"
+  sleep 1
+  bash ../.Packages/Tool-X_Installer.mpk
+  sleep 1
+  echo "All Package Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+		"Uninstall All")
+            read -p "Do you want to uninstall all the applets installed from the Software Center? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling all applets..."
+  sleep 1
+  rm -rf ../.software/*
+  sleep 2
+  echo "Uninstalled!"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  break;
+else
+  break;
+fi
+            ;;
+        "Quit")
+		clear
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
