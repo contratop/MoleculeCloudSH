@@ -1,0 +1,57 @@
+clear
+	sleep 1
+	echo Molecule Package Manager  1.0
+	sleep 1
+	echo Powered by ContratopDev
+	sleep 3
+clear
+	echo What would you like to do?
+	PS3='Please enter your choice: '
+options=("Update" "Uninstall" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Update")
+		echo ""
+            echo "Updating..."
+			sleep 2
+			cd ..
+			rm -rf MoleculeCloudSH
+			git clone https://github.com/contratop/MoleculeCloudSH
+			sleep 1
+			read -p "MoleculeShell Updated! Update Molecule Suite? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Updating Molecule Suite..."
+  sleep 2
+  bash MoleculeSuiteInstall.mpk
+  sleep 2
+  echo "All MoleculeShell Suite Updated! YEY!"
+  sleep 3
+  break;
+else
+  echo "booo";
+fi
+            ;;
+        "Uninstall")
+            read -p "UNINSTALL SELECTED!! Continue (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling..."
+  sleep 2
+  cd ..
+  rm -rf MoleculeCloudSH
+  sleep 2
+  echo "Uninstalled!"
+  sleep 2
+  break;
+else
+  break;
+fi
+            ;;
+        "Quit")
+		clear
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+	
