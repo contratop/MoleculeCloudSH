@@ -39,12 +39,12 @@ clear
 sleep 1
 echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
   sleep 3
-  break;
+  exit;
 else
   echo "MoleculeShell Updated, Molecule Suite Skipped"
 echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
 sleep 2
-break;
+exit;
 fi
             ;;
         "Uninstall")
@@ -59,9 +59,9 @@ if [ "$CONT" = "y" ]; then
   sleep 2
   echo "Uninstalled!"
   sleep 2
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
 		"InstallSuite")
@@ -74,7 +74,7 @@ if [ "$CONT" = "y" ]; then
   echo ""
   echo Suite Installed!;
 else
-  break;
+  exit;
 fi
             ;;
 		"Open Package Manager")
@@ -121,7 +121,7 @@ done
 ;;
         "Quit")
 		clear
-            break
+            exit
             ;;
         *) echo "invalid option $REPLY";;
     esac
