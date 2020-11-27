@@ -36,6 +36,7 @@ echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
   break;
 else
   echo "MoleculeShell Updated, Molecule Suite Skipped"
+echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
 sleep 2
 break;
 fi
