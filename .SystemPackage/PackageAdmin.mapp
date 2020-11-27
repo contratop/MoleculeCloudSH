@@ -123,6 +123,7 @@ if [ "$CONT" = "y" ]; then
   echo "Uninstalling all applets..."
   sleep 1
   rm -rf ../.software/*
+touch ../.software/SoftwareCore.core
   sleep 2
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
