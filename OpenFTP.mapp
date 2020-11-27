@@ -1,11 +1,11 @@
 clear
   sleep 1
-  echo MoleculeShell 1.0
+  echo Molecule OpenFTP Server 1.1
   sleep 1
   echo Powered by ContratopDev
   sleep 2
 clear
-echo Molecule OpenFTP Server 1.0
+echo Molecule OpenFTP Server 1.1
 echo Running in Applets/
 echo ""
 sleep 1
