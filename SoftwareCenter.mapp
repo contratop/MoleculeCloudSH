@@ -25,7 +25,7 @@ sleep 1
 			git clone https://github.com/contratop/MoleculeCloudSH
 sleep 1
 rm -rf MoleculeCloudSH/.software
-			mv .software/* MoleculeCloudSH/.software/
+			mv .software/ MoleculeCloudSH/.software/
 	sleep 1
 			read -p "MoleculeShell Updated! Update Molecule Suite? (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
