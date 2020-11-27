@@ -24,7 +24,7 @@ do
 if [ "$CONT" = "y" ]; then
   echo "Installing SocialSploit..."
   sleep 1
-  bash ../.Packages/SocialSploit_Installet.mpk
+  bash ../.Packages/SocialSploit_Installer.mpk
   sleep 2
   clear
   echo "SocialSploit Installed"
