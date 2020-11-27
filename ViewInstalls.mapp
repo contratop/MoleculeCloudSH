@@ -1,0 +1,7 @@
+clear
+echo Molecule Software Wiever 1.0
+echo Powered by ContratopDev
+echo ""
+sleep 1
+ls -l .software
+exit

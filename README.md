@@ -9,3 +9,4 @@ Install command:
  - OpenFTP: Open FTP Server Easy [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
  - ProcessWiever: Full Process Wiever with -e [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
  - Software Center: Update or Install Modules [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+ - Software Wiever: View Installed Modules in ContratopShell
