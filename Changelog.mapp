@@ -1,0 +1,4 @@
+echo "MoleculeShell 1.5"
+echo "-First Stable Release"
+exit
+
