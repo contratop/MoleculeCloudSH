@@ -29,9 +29,9 @@ if [ "$CONT" = "y" ]; then
   clear
   echo "SocialSploit Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
         "Tool-X")
@@ -44,13 +44,13 @@ if [ "$CONT" = "y" ]; then
   clear
   echo "SocialSploit Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
         "Quit")
-            break
+            exit
             ;;
         *) echo "invalid option $REPLY";;
     esac
@@ -72,9 +72,9 @@ if [ "$CONT" = "y" ]; then
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
         "Tool-X")
@@ -86,13 +86,13 @@ if [ "$CONT" = "y" ]; then
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
         "Quit")
-            break
+            exit
             ;;
         *) echo "invalid option $REPLY";;
     esac
@@ -112,9 +112,9 @@ if [ "$CONT" = "y" ]; then
   sleep 1
   echo "All Package Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
 		"Uninstall All")
@@ -126,14 +126,14 @@ if [ "$CONT" = "y" ]; then
   sleep 2
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
-  break;
+  exit;
 else
-  break;
+  exit;
 fi
             ;;
         "Quit")
 		clear
-            break
+            exit
             ;;
         *) echo "invalid option $REPLY";;
     esac
