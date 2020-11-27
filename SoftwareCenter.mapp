@@ -1,13 +1,13 @@
 clear
 	sleep 1
-	echo Molecule Software Center  1.4
+	echo Molecule Software Center  1.5
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
 echo ""
 	echo What would you like to do?
 	PS3='Please enter your choice: '
-options=("Update" "Uninstall" "InstallSuite" "Open Package Manager" "Quit")
+options=("Update" "Uninstall" "InstallSuite" "Open Package Manager" "Open Applet" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -71,6 +71,42 @@ fi
 		"Open Package Manager")
 		clear
 		bash .SystemPackage/PackageAdmin.mapp
+		exit;
+;;
+		"Open Applet")
+		clear
+		echo ""
+		PS3='Select Applet to Run: '
+options=("SocialSploit" "Tool-X" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "SocialSploit")
+            echo "Running SocialSploit..."
+			sleep 1
+			bash .software/SocialSploit/Sploit
+            ;;
+        "Tool-X")
+            echo ""
+			echo "Warning: Tool-X mod current in BETA"
+			echo "Tool-X has not yet been adapted to the Software Center"
+			read -p "Continue (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  Tool-X
+  exit
+else
+  exit;
+fi
+            ;;
+        "Option 3")
+            echo "you chose choice $REPLY which is $opt"
+            ;;
+        "Quit")
+            exit
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
 		exit;
 ;;
         "Quit")
