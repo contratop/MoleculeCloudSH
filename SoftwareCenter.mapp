@@ -95,6 +95,7 @@ do
             echo "Running SocialSploit..."
 			sleep 1
 			bash .software/SocialSploit/Sploit
+exit
             ;;
         "Tool-X")
             echo ""
