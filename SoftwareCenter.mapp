@@ -16,7 +16,9 @@ do
             echo "Updating..."
 			sleep 2
 rm -rf ../.software
+rm -rf ../HomeDir
 			mv .software/ ../
+mv HomeDir/ ../
 sleep 1
 			cd ..
 sleep 1
@@ -25,7 +27,9 @@ sleep 1
 			git clone https://github.com/contratop/MoleculeCloudSH
 sleep 1
 rm -rf MoleculeCloudSH/.software
+rm -rf MoleculeCloudSH/HomeDir
 			mv .software/ MoleculeCloudSH/.software/
+mv HomeDir/ MoleculeCloudSH/HomeDir
 	sleep 1
 			read -p "MoleculeShell Updated! Update Molecule Suite? (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
