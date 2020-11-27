@@ -1,13 +1,13 @@
 clear
 	sleep 1
-	echo Molecule Software Center  1.3
+	echo Molecule Software Center  1.4
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
 echo ""
 	echo What would you like to do?
 	PS3='Please enter your choice: '
-options=("Update" "Uninstall" "InstallSuite" "Quit")
+options=("Update" "Uninstall" "InstallSuite" "Open Package Manager" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -68,6 +68,11 @@ else
   break;
 fi
             ;;
+		"Open Package Manager")
+		clear
+		bash .SystemPackage/PackageAdmin.mapp
+		exit;
+;;
         "Quit")
 		clear
             break
