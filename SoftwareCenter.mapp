@@ -15,12 +15,17 @@ do
 		echo ""
             echo "Updating..."
 			sleep 2
+rm -rf ../.software
 			mv .software/ ../
+sleep 1
 			cd ..
+sleep 1
 			rm -rf MoleculeCloudSH
+sleep 1
 			git clone https://github.com/contratop/MoleculeCloudSH
+sleep 1
 			mv ../.software/* MoleculeCloudSH/.software/
-			sleep 1
+	sleep 1
 			read -p "MoleculeShell Updated! Update Molecule Suite? (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Updating Molecule Suite..."
