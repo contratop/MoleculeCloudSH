@@ -41,7 +41,9 @@ echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
   sleep 3
   exit;
 else
+clear
   echo "MoleculeShell Updated, Molecule Suite Skipped"
+echo ""
 echo "PLEASE EXECUTE: cd ../MoleculeCloudSH"
 sleep 2
 exit;
