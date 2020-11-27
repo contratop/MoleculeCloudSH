@@ -80,7 +80,7 @@ fi
 		"Open Package Manager")
 		clear
 cd .SystemPackage
-		bash .SystemPackage/PackageAdmin.mapp
+		bash /PackageAdmin.mapp
 		exit;
 ;;
 		"Open Applet")
