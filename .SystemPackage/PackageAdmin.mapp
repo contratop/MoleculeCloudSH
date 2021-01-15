@@ -14,7 +14,7 @@ do
         "Install a Applet")
             echo "Select a Applet"
 			PS3='Please enter your choice: '
-options=("SocialSploit" "Tool-X" "Quit")
+options=("SocialSploit" "Tool-X" "Sherlock" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -42,7 +42,21 @@ if [ "$CONT" = "y" ]; then
   bash ../.Packages/Tool-X_Installer.mpk
     sleep 2
   clear
-  echo "SocialSploit Installed"
+  echo "Tool-X Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  exit;
+else
+  exit;
+fi
+        "Sherlock")
+            read -p "Install Sherlock? (y/n)" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing Tool-X"
+  sleep 1
+  bash ../.Packages/Sherlock_Installer.mpk
+    sleep 2
+  clear
+  echo "Sherlock Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
 else

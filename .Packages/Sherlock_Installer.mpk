@@ -1,0 +1,26 @@
+clear
+echo Molecule Software Installer 1.2
+echo Powered by ContratopDev
+sleep 3
+clear
+	echo Sherlockc Installer... by ContratopDev
+	sleep 1
+	echo Sherlock made by sdushantha
+	sleep 3
+clear
+	echo Updating Software before Install new software...
+	sleep 4
+	pkg update
+	pkg upgrade
+	sleep 2
+clear
+echo Connecting to Molecule Servers...
+ping -c 1 104.26.2.2
+sleep 3
+	echo Installing Sherlock...
+	sleep 5
+	git clone https://github.com/sherlock-project/sherlock.git ../.software/herlock
+	cd ../.software/sherlock
+	python3 -m pip install -r requirements.txt
+exit
+#Fin del instalador, toma el relevo de Tool-X
