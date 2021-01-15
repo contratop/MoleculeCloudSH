@@ -7,7 +7,7 @@ clear
 	echo ""
 	echo ""
 PS3='Please enter your choice: '
-options=("Install a Applet" "Uninstall a Applet" "Install All" "Uninstall All" "Quit")
+options=("Install a Applet" "Uninstall a Applet" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -27,6 +27,7 @@ if [ "$CONT" = "y" ]; then
   bash ../.Packages/SocialSploit_Installer.mpk
   sleep 2
   clear
+  mv ../.executables/SocialSploit.mapp ../Apps/
   echo "SocialSploit Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
@@ -57,6 +58,7 @@ if [ "$CONT" = "y" ]; then
   bash ../.Packages/Sherlock_Installer.mpk
     sleep 2
   clear
+  mv ../.executables/Sherlock.mapp ../Apps/
   echo "Sherlock Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
@@ -84,6 +86,7 @@ if [ "$CONT" = "y" ]; then
   echo "Uninstalling SocialSploit..."
   sleep 1
   rm -rf ../.software/SocialSploit
+  rm ../Apps/SocialSploit.mapp
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
@@ -106,46 +109,27 @@ else
   exit;
 fi
             ;;
-        "Quit")
-            exit
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done
-            ;;
-        "Install All")
-		Package Avariable: 2
-            read -p "Are you sure you want to install all the available software? it may take a LONG time (y/n)?" CONT
+            "Sherlock")
+            read -p "You sure want to uninstall Sherlock (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
-  echo "Installing (1/2)"
+  echo "Uninstalling Sherlock..."
   sleep 1
-  bash ../.Packages/SocialSploit_Installet.mpk
+  rm -rf ../.software/sherlock
+  rm ../Apps/Sherlock.mapp
   sleep 1
-  echo "Installing (2/2)"
-  sleep 1
-  bash ../.Packages/Tool-X_Installer.mpk
-  sleep 1
-  echo "All Package Installed"
-  read -t 5 -n 1 -s -r -p "Press any key to exit"
-  exit;
-else
-  exit;
-fi
-            ;;
-		"Uninstall All")
-            read -p "Do you want to uninstall all the applets installed from the Software Center? (y/n)?" CONT
-if [ "$CONT" = "y" ]; then
-  echo "Uninstalling all applets..."
-  sleep 1
-  rm -rf ../.software/*
-touch ../.software/SoftwareCore.core
-  sleep 2
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
 else
   exit;
 fi
+            ;;
+        "Quit")
+            exit
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
             ;;
         "Quit")
 		clear

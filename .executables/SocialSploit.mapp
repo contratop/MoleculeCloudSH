@@ -1,0 +1,8 @@
+echo Running SocialSploit
+sleep 1
+#AppExecutable Runner
+echo "Running SocialSploit..."
+			sleep 1
+cd ../.software/SocialSploit/
+			bash Sploit
+exit
