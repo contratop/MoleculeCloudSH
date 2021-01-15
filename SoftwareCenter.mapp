@@ -103,6 +103,7 @@ do
 cd .software/SocialSploit/
 			bash Sploit
 exit
+    ;;
         "Sherlock")
             echo "Running Sherlock..."
 			sleep 1
