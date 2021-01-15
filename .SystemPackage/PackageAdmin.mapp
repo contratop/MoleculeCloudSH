@@ -1,6 +1,6 @@
 clear
 	sleep 1
-	echo Molecule Package Manager  0.8 BETA
+	echo Molecule Package Manager  1.0
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
