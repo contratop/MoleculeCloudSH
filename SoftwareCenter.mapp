@@ -1,6 +1,6 @@
 clear
 	sleep 1
-	echo Molecule Software Center  1.7
+	echo Molecule Software Center  1.8
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
@@ -17,8 +17,12 @@ do
 			sleep 2
 rm -rf ../.software
 rm -rf ../HomeDir
+rm -rf ../Apps
+rm -rf ../.executables
 			mv .software/ ../
 mv HomeDir/ ../
+mv Apps/ ../
+mv .executables/ ../
 sleep 1
 			cd ..
 sleep 1
