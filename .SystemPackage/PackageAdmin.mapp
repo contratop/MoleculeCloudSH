@@ -48,6 +48,7 @@ if [ "$CONT" = "y" ]; then
 else
   exit;
 fi
+            ;;
         "Sherlock")
             read -p "Install Sherlock? (y/n)" CONT
 if [ "$CONT" = "y" ]; then
