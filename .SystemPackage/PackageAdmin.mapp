@@ -84,7 +84,7 @@ if [ "$CONT" = "y" ]; then
   echo "Uninstalling SocialSploit..."
   sleep 1
   rm -rf ../.software/SocialSploit
-  rm ../Apps/SocialSploit.mapp
+  mv ../Apps/SocialSploit.mapp ../.executables/
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
@@ -113,7 +113,7 @@ if [ "$CONT" = "y" ]; then
   echo "Uninstalling Sherlock..."
   sleep 1
   rm -rf ../.software/sherlock
-  rm ../Apps/Sherlock.mapp
+  mv ../Apps/Sherlock.mapp ../.executables/
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
