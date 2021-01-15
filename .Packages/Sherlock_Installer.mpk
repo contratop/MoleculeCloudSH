@@ -19,7 +19,8 @@ ping -c 1 104.26.2.2
 sleep 3
 	echo Installing Sherlock...
 	sleep 5
-	git clone https://github.com/sherlock-project/sherlock.git ../.software/herlock
+	git clone https://github.com/sherlock-project/sherlock.git ../.software/sherlock
+	mv ../.executables/Sherlock.mapp ../Apps/
 	cd ../.software/sherlock
 	python3 -m pip install -r requirements.txt
 exit

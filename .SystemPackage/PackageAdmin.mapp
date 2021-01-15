@@ -27,7 +27,6 @@ if [ "$CONT" = "y" ]; then
   bash ../.Packages/SocialSploit_Installer.mpk
   sleep 2
   clear
-  mv ../.executables/SocialSploit.mapp ../Apps/
   echo "SocialSploit Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
@@ -58,7 +57,6 @@ if [ "$CONT" = "y" ]; then
   bash ../.Packages/Sherlock_Installer.mpk
     sleep 2
   clear
-  mv ../.executables/Sherlock.mapp ../Apps/
   echo "Sherlock Installed"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
   exit;
