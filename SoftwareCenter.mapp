@@ -1,6 +1,6 @@
 clear
 	sleep 1
-	echo Molecule Software Center  1.5
+	echo Molecule Software Center  1.6
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
