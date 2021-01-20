@@ -5,7 +5,7 @@ sleep 3
 clear
 	echo SayCheese Installer... by ContratopDev
 	sleep 1
-	echo SayCheese made by sdushantha
+	echo SayCheese made by thelinuxchoice
 	sleep 3
 clear
 	echo Updating Software before Install new software...
