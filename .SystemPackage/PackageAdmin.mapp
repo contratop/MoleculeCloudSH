@@ -65,9 +65,9 @@ else
 fi
             ;;
                 "SayCheese")
-            read -p "Install Sherlock? (y/n)" CONT
+            read -p "Install SayCheese? (y/n)" CONT
 if [ "$CONT" = "y" ]; then
-  echo "Installing Tool-X"
+  echo "Installing SayCheese"
   sleep 1
   bash ../.Packages/SayCheese_Installer.mpk
     sleep 2
