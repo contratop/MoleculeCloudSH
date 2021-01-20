@@ -19,7 +19,7 @@ ping -c 1 104.26.2.2
 sleep 3
 	echo Installing SayCheese...
 	sleep 5
-	https://github.com/hangetzzu/saycheese ../.software/saycheese
+	git clone https://github.com/hangetzzu/saycheese ../.software/saycheese
 	mv ../.executables/SayCheese.mapp ../Apps/
 exit
 #Fin del instalador, toma el relevo de Tool-X
