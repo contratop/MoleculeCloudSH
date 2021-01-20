@@ -3,7 +3,7 @@ echo Molecule Software Installer 1.2
 echo Powered by ContratopDev
 sleep 3
 clear
-	echo Sherlockc Installer... by ContratopDev
+	echo Sherlock Installer... by ContratopDev
 	sleep 1
 	echo Sherlock made by sdushantha
 	sleep 3
