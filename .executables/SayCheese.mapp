@@ -5,5 +5,4 @@ clear
 cd .software/saycheese/
 			#Inicio del programa
         bash saycheese.sh
-    break
-exit
+        exit
