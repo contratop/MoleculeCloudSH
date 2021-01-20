@@ -2,7 +2,7 @@ echo Running Saycheese
 sleep 1
             #AppExecutable Runner
 clear
-cd .software/saycheese/saycheese/
+cd .software/saycheese/
 			#Inicio del programa
         bash saycheese.sh
     break
