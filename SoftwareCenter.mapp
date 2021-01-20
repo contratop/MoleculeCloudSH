@@ -32,8 +32,10 @@ sleep 1
 sleep 1
 rm -rf MoleculeCloudSH/.software
 rm -rf MoleculeCloudSH/HomeDir
+rm -rf MoleculeCloudSH/Apps
 			mv .software/ MoleculeCloudSH/.software/
 mv HomeDir/ MoleculeCloudSH/HomeDir
+mv Apps/ MoleculeCloudSH/Apps
 	sleep 1
 			read -p "MoleculeShell Updated! Update Molecule Suite? (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
