@@ -1,0 +1,9 @@
+echo Running Saycheese
+sleep 1
+            #AppExecutable Runner
+clear
+cd .software/saycheese/saycheese/
+			#Inicio del programa
+        bash saycheese.py
+    break
+exit

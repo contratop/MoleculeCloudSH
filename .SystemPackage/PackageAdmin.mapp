@@ -14,7 +14,7 @@ do
         "Install a Applet")
             echo "Select a Applet"
 			PS3='Please enter your choice: '
-options=("SocialSploit" "Tool-X" "Sherlock" "Quit")
+options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -64,6 +64,21 @@ else
   exit;
 fi
             ;;
+                "SayCheese")
+            read -p "Install Sherlock? (y/n)" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing Tool-X"
+  sleep 1
+  bash ../.Packages/SayCheese_Installer.mpk
+    sleep 2
+  clear
+  echo "Sherlock Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  exit;
+else
+  exit;
+fi
+            ;;
         "Quit")
             exit
             ;;
@@ -74,7 +89,7 @@ done
         "Uninstall a Applet")
             echo "Select an applet to uninstall"
 			PS3='Please enter your choice: '
-options=("SocialSploit" "Tool-X" "Quit")
+options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -114,6 +129,21 @@ if [ "$CONT" = "y" ]; then
   sleep 1
   rm -rf ../.software/sherlock
   mv ../Apps/Sherlock.mapp ../.executables/
+  sleep 1
+  echo "Uninstalled!"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  exit;
+else
+  exit;
+fi
+            ;;
+                        "SayCheese")
+            read -p "You sure want to uninstall Sherlock (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling SayCheese..."
+  sleep 1
+  rm -rf ../.software/saycheese
+  mv ../Apps/SayCheese.mapp ../.executables/
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"
