@@ -4,6 +4,6 @@ sleep 1
 clear
 cd .software/saycheese/saycheese/
 			#Inicio del programa
-        bash saycheese.py
+        bash saycheese.sh
     break
 exit
