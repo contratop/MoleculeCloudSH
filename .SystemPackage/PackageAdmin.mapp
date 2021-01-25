@@ -14,7 +14,7 @@ do
         "Install a Applet")
             echo "Select a Applet"
 			PS3='Please enter your choice: '
-options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "Quit")
+options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "MaskPhish" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -79,6 +79,21 @@ else
   exit;
 fi
             ;;
+                            "MaskPhish")
+            read -p "Install MaskPhish? (y/n)" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Installing MaskPhish"
+  sleep 1
+  bash ../.Packages/MaskPhish_Installer.mpk
+    sleep 2
+  clear
+  echo "MaskPhish Installed"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  exit;
+else
+  exit;
+fi
+            ;;
         "Quit")
             exit
             ;;
@@ -89,7 +104,7 @@ done
         "Uninstall a Applet")
             echo "Select an applet to uninstall"
 			PS3='Please enter your choice: '
-options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "Quit")
+options=("SocialSploit" "Tool-X" "Sherlock" "SayCheese" "MaskPhish" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -138,12 +153,27 @@ else
 fi
             ;;
                         "SayCheese")
-            read -p "You sure want to uninstall Sherlock (y/n)?" CONT
+            read -p "You sure want to uninstall SayCheese (y/n)?" CONT
 if [ "$CONT" = "y" ]; then
   echo "Uninstalling SayCheese..."
   sleep 1
   rm -rf ../.software/saycheese
   mv ../Apps/SayCheese.mapp ../.executables/
+  sleep 1
+  echo "Uninstalled!"
+  read -t 5 -n 1 -s -r -p "Press any key to exit"
+  exit;
+else
+  exit;
+fi
+            ;;
+                                    "MaskPhish")
+            read -p "You sure want to uninstall MaskPhish (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Uninstalling MaskPhish..."
+  sleep 1
+  rm -rf ../.software/maskphish
+  mv ../Apps/MaskPhish.mapp ../.executables/
   sleep 1
   echo "Uninstalled!"
   read -t 5 -n 1 -s -r -p "Press any key to exit"

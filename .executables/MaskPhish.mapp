@@ -1,0 +1,8 @@
+echo Running MaskPhish
+sleep 1
+            #AppExecutable Runner
+clear
+cd .software/maskphish/
+			#Inicio del programa
+        bash maskphish.sh
+        exit
