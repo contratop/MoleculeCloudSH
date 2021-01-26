@@ -13,11 +13,11 @@ do
     case $opt in
                 "MaskPhish")
 		#Secuencia de comprobacion del programa
-            FILE=.software/maskphish
+            FILE=../.software/maskphish
                 if [ -d "$FILE" ]; then
                                #AppExecutable Runner
                                     clear
-                                    cd .software/maskphish/
+                                    cd ../.software/maskphish/
                                     #Inicio del programa
                                     bash maskphish.sh
                                 exit
@@ -29,7 +29,7 @@ do
                         git clone https://github.com/jaykali/maskphish ../.software/maskphish
                                     #AppExecutable Runner
                                     clear
-                                    cd .software/maskphish/
+                                    cd ../.software/maskphish/
                                     #Inicio del programa
                                     bash maskphish.sh
                                 exit
@@ -37,11 +37,11 @@ fi
         ;;
                 "SayCheese")
 		#Secuencia de comprobacion del programa
-            FILE=.software/saycheese
+            FILE=../.software/saycheese
                 if [ -d "$FILE" ]; then
                                #AppExecutable Runner
                                     clear
-                                    cd .software/saycheese/
+                                    cd ../.software/saycheese/
                                     #Inicio del programa
                                     bash saycheese.sh
                                 exit
@@ -53,7 +53,7 @@ fi
                         git clone https://github.com/hangetzzu/saycheese ../.software/saycheese
                                     #AppExecutable Runner
                                     clear
-                                    cd .software/saycheese/
+                                    cd ../.software/saycheese/
                                     #Inicio del programa
                                     bash saycheese.sh
                                 exit
@@ -61,11 +61,11 @@ fi
         ;;
                 "Sherlock")
 		#Secuencia de comprobacion del programa
-            FILE=.software/sherlock
+            FILE=../.software/sherlock
                 if [ -d "$FILE" ]; then
                                #AppExecutable Runner
                                     clear
-                                    cd .software/sherlock/sherlock/
+                                    cd ../.software/sherlock/sherlock/
                                     #Inicio del programa Sherlock BuiltIn
                                             echo Enter Username to Sherlock:
                                             read sherlockusr
@@ -87,13 +87,13 @@ fi
                         echo "Descargando Sherlock"
                         git clone https://github.com/sherlock-project/sherlock.git ../.software/sherlock
                         #Special Dependencies
-                        cd .software/sherlock
+                        cd ../.software/sherlock
                         python3 -m pip install -r requirements.txt
                                     #AppExecutable Runner
                                     clear
                                     cd sherlock
                                     #Inicio del programa
-                                    cd .software/sherlock/sherlock/
+                                    cd ../.software/sherlock/sherlock/
                                             #Inicio del programa Sherlock BuiltIn
                                             echo Enter Username to Sherlock:
                                             read sherlockusr
@@ -112,11 +112,11 @@ fi
         ;;
                 "SocialXploit")
 		#Secuencia de comprobacion del programa
-            FILE=.software/SocialSploit
+            FILE=../.software/SocialSploit
                 if [ -d "$FILE" ]; then
                                #AppExecutable Runner
                                     clear
-                                    cd .software/SocialSploit/
+                                    cd ../.software/SocialSploit/
                                     #Inicio del programa
                                     bash Sploit
                                 exit
@@ -128,7 +128,7 @@ fi
                         git clone https://github.com/Cesar-Hack-Gray/SocialSploit ../.software/SocialSploit
                                     #AppExecutable Runner
                                     clear
-                                    cd .software/SocialSploit/
+                                    cd ../.software/SocialSploit/
                                     #Instalador Idependiente
                                     bash install.sh
                                     #Inicio del programa
