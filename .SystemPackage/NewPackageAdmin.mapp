@@ -7,7 +7,7 @@ clear
 	echo ""
 	echo ""
 PS3='Please enter your choice: '
-options=("MaskPhish" "SayCheese")
+options=("MaskPhish" "SayCheese" "Sherlock" "SocialXploit")
 select opt in "${options[@]}"
 do
     case $opt in
