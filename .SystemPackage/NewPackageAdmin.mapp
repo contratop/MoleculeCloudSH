@@ -1,0 +1,145 @@
+clear
+	sleep 1
+	echo Molecule Package Manager  1.0
+	sleep 1
+	echo Powered by ContratopDev
+	sleep 3
+	echo ""
+	echo ""
+PS3='Please enter your choice: '
+options=("MaskPhish" "SayCheese")
+select opt in "${options[@]}"
+do
+    case $opt in
+                "MaskPhish")
+		#Secuencia de comprobacion del programa
+            FILE=.software/maskphish
+                if [ -d "$FILE" ]; then
+                               #AppExecutable Runner
+                                    clear
+                                    cd .software/maskphish/
+                                    #Inicio del programa
+                                    bash maskphish.sh
+                                exit
+                #Separador entre verdadero y falso
+                else
+                #secuencia de descarga del programa
+                clear
+                        echo "Descargando MaskPhish"
+                        git clone https://github.com/jaykali/maskphish ../.software/maskphish
+                                    #AppExecutable Runner
+                                    clear
+                                    cd .software/maskphish/
+                                    #Inicio del programa
+                                    bash maskphish.sh
+                                exit
+fi
+        ;;
+                "SayCheese")
+		#Secuencia de comprobacion del programa
+            FILE=.software/saycheese
+                if [ -d "$FILE" ]; then
+                               #AppExecutable Runner
+                                    clear
+                                    cd .software/saycheese/
+                                    #Inicio del programa
+                                    bash saycheese.sh
+                                exit
+                #Separador entre verdadero y falso
+                else
+                #secuencia de descarga del programa
+                clear
+                        echo "Descargando SayCheese"
+                        git clone https://github.com/hangetzzu/saycheese ../.software/saycheese
+                                    #AppExecutable Runner
+                                    clear
+                                    cd .software/saycheese/
+                                    #Inicio del programa
+                                    bash saycheese.sh
+                                exit
+fi
+        ;;
+                "Sherlock")
+		#Secuencia de comprobacion del programa
+            FILE=.software/sherlock
+                if [ -d "$FILE" ]; then
+                               #AppExecutable Runner
+                                    clear
+                                    cd .software/sherlock/sherlock/
+                                    #Inicio del programa Sherlock BuiltIn
+                                            echo Enter Username to Sherlock:
+                                            read sherlockusr
+                                            echo
+                                            echo Username $sherlockusr selected
+                                            sleep 1
+                                            echo
+                                            echo Running Sherlock with $sherlockusr
+                                            sleep 1
+                                                clear  
+                                                python3 sherlock.py $sherlockusr
+                                            echo
+                                    break
+                                exit
+                #Separador entre verdadero y falso
+                else
+                #secuencia de descarga del programa
+                clear
+                        echo "Descargando Sherlock"
+                        git clone https://github.com/sherlock-project/sherlock.git ../.software/sherlock
+                        #Special Dependencies
+                        cd .software/sherlock
+                        python3 -m pip install -r requirements.txt
+                                    #AppExecutable Runner
+                                    clear
+                                    cd sherlock
+                                    #Inicio del programa
+                                    cd .software/sherlock/sherlock/
+                                            #Inicio del programa Sherlock BuiltIn
+                                            echo Enter Username to Sherlock:
+                                            read sherlockusr
+                                            echo
+                                            echo Username $sherlockusr selected
+                                            sleep 1
+                                            echo
+                                            echo Running Sherlock with $sherlockusr
+                                            sleep 1
+                                                clear  
+                                                python3 sherlock.py $sherlockusr
+                                            echo
+                                    break
+                                exit
+fi
+        ;;
+                "SocialXploit")
+		#Secuencia de comprobacion del programa
+            FILE=.software/SocialSploit
+                if [ -d "$FILE" ]; then
+                               #AppExecutable Runner
+                                    clear
+                                    cd .software/SocialSploit/
+                                    #Inicio del programa
+                                    bash Sploit
+                                exit
+                #Separador entre verdadero y falso
+                else
+                #secuencia de descarga del programa
+                clear
+                        echo "Descargando SocialXploit"
+                        git clone https://github.com/Cesar-Hack-Gray/SocialSploit ../.software/SocialSploit
+                                    #AppExecutable Runner
+                                    clear
+                                    cd .software/SocialSploit/
+                                    #Instalador Idependiente
+                                    bash install.sh
+                                    #Inicio del programa
+                                    bash maskphish.sh
+                                exit
+fi
+        ;;
+        "Quit")
+		clear
+            exit
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done

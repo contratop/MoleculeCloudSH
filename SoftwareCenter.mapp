@@ -7,7 +7,7 @@ clear
 echo ""
 	echo What would you like to do?
 	PS3='Please enter your choice: '
-options=("Update" "Uninstall" "InstallSuite" "Open Package Manager" "Quit")
+options=("Update" "Uninstall" "InstallSuite" "Run Software" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -89,10 +89,10 @@ else
   exit;
 fi
             ;;
-		"Open Package Manager")
+		"Run Software")
 		clear
 cd .SystemPackage
-		bash PackageAdmin.mapp
+		bash NewPackageAdmin.mapp
 		exit;
             ;;
         "Option 3")
