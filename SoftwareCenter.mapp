@@ -1,13 +1,13 @@
 clear
 	sleep 1
-	echo Molecule Software Center  1.8
+	echo Molecule Software Center  2.0
 	sleep 1
 	echo Powered by ContratopDev
 	sleep 3
 echo ""
 	echo What would you like to do?
 	PS3='Please enter your choice: '
-options=("Update" "Uninstall" "InstallSuite" "Run Software" "Quit")
+options=("Update" "Uninstall" "InstallSuite" "Run Software" "Delete SaveData" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -95,10 +95,17 @@ cd .SystemPackage
 		bash NewPackageAdmin.mapp
 		exit;
             ;;
-        "Option 3")
-            echo "you chose choice $REPLY which is $opt"
-            ;;
-        "Quit")
+        "Delete SaveData")
+        clear
+        		read -p "Delete All Applets SaveData? (y/n)?" CONT
+if [ "$CONT" = "y" ]; then
+  echo "Deleting..."
+  rm -rf .software/*
+  sleep 2
+  echo "All Applets data deleted!"
+else
+  exit;
+fi 
             exit
             ;;
         *) echo "invalid option $REPLY";;
