@@ -9,5 +9,5 @@ echo Molecule OpenFTP Server 1.1
 echo Running in Applets/
 echo ""
 sleep 1
-python .SystemPackage/ftpserver.py
+python .SystemPackage/ftpserver3.py
 

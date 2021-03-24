@@ -5,12 +5,17 @@ clear
 	echo Powered by ContratopDev
 	sleep 3
 echo ""
+
+
 	echo What would you like to do?
 	PS3='Please enter your choice: '
 options=("Update" "Uninstall" "InstallSuite" "Run Software" "Delete SaveData" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
+
+
+
         "Update")
 		echo ""
             echo "Updating..."
@@ -59,6 +64,9 @@ sleep 2
 exit;
 fi
             ;;
+
+
+
         "Uninstall")
 clear
 echo "WARNING: All data we be erased, Including Applets SaveData"
@@ -76,6 +84,9 @@ else
   exit;
 fi
             ;;
+
+
+
 		"InstallSuite")
 		echo ""
 		read -p "Install Only Actual Suite? (y/n)?" CONT
@@ -89,12 +100,18 @@ else
   exit;
 fi
             ;;
+
+
+
 		"Run Software")
 		clear
 cd .SystemPackage
 		bash NewPackageAdmin.mapp
 		exit;
             ;;
+
+
+
         "Delete SaveData")
         clear
         		read -p "Delete All Applets SaveData? (y/n)?" CONT
@@ -108,11 +125,9 @@ else
 fi 
             exit
             ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done
-		exit;
-;;
+
+
+
         "Quit")
 		clear
             exit
