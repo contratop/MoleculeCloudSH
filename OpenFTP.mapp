@@ -12,13 +12,13 @@ do
     case $opt in
         "Termux")
         clear
-            python3 .SystemPackage/chorizo_portuano.py
+            python .SystemPackage/chorizo_portuano.py
             ;;
         "AMD/Intel")
-            python3 .SystemPackage/brujaconchorizo.py
+            python .SystemPackage/brujaconchorizo.py
             ;;
         "Manual")
-            python3 .SystemPackage/chorizo_maldito.py
+            python .SystemPackage/chorizo_maldito.py
             ;;
         "Quit")
             break
