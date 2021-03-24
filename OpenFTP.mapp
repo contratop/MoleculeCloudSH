@@ -5,9 +5,26 @@ clear
   echo Powered by ContratopDev
   sleep 2
 clear
-echo Molecule OpenFTP Server 1.1
-echo Running in Applets/
-echo ""
-sleep 1
-python .SystemPackage/ftpserver3.py
+PS3='Please enter your choice: '
+options=("Termux" "AMD/Intel" "Manual" "Quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Termux")
+        clear
+            python3 .SystemPackage/chorizo_portuano.py
+            ;;
+        "AMD/Intel")
+            python3 .SystemPackage/brujaconchorizo.py
+            ;;
+        "Manual")
+            python3 .SystemPackage/chorizo_maldito.py
+            ;;
+        "Quit")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+break
 
